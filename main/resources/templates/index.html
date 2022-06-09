@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<th:block th:insert="fragments/header :: header"></th:block>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<title>Recipe House</title>
+</head>
+<body>
+<main>
+	<span class="backgroundimg">
+	
+	</span>
+	<div class="container">
+	<div class="row"></div>
+	<div class="row">
+	<div class="col s6">
+	<div class="card index-contents">
+	<div class="card-content">
+	<div class="card-title center">かんたんレシピ管理アプリ</div>
+	<div class="index-image center">
+	
+		</div>
+		<h6 class="center">
+		シンプル設計だから、かんたんにレシピ管理ができます
+		</h6>
+	</div>
+	</div>
+	</div>
+	<div class="col s6">
+	<div class="card index-contents">
+	<div class="card-content">
+	<div class="card-title center">質問・相談</div>
+	<div class="index-image center">
+	
+		</div>
+		<h6 class="center">
+		レシピのことでわからないことはすぐ相談できます
+		</h6>
+	</div>
+	</div>
+	</div>
+	<div class="row"></div>
+	<div class="row"></div>
+	<div class="row">
+	<h4 class="center">さあ、はじめよう！</h4>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col s6 center">
+	<a th:href="@{/login}" class="waves-effect waves-light btn-large"><i class="material-icons left">input</i><span class="index-btn-text">ログイン</span></a><br>
+	<a th:href="@{/guest-login}"> <p>ゲストログインはこちら</p></a>
+	</div>
+	<div class="col s6 center">
+	<a th:href="@{/register}" class="waves-effect waves-light btn-large"><i class="material-icons left">person_add</i><span class="index-btn-text">会員登録</span></a>
+	</div>
+	</div>
+	<div class="row"></div>
+	</div>
+
+</main>
+<script>
+	$(document).ready(function(){
+		$('#message').fadeOut(2000);
+		$('.sidenav').sidenav();
+		$(".dropdown-trigger").dropdown();
+	});
+</script>
+</body>
+<th:block th:insert="fragments/footer :: footer"></th:block>
+</html>

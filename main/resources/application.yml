@@ -1,0 +1,25 @@
+#共通環境
+mybatis:
+ type-aliases-package: dev.itboot.mb.model
+ configuration:
+  map-underscore-to-camel-case: true
+server:
+ port: 5000
+ 
+
+spring:
+# jpa:
+#  defer-datasource-initialization: true
+# datasource:
+#   url: jdbc:h2:mem:testdb
+ config:
+  activate:
+   on-profile: dev
+ datasource:
+  url: jdbc:mysql://aazxw0i15cluh9.cckxubamazdz.ap-northeast-1.rds.amazonaws.com:3306/ebdb
+  username: adimin
+  password: minamidb
+ sql:
+  init:
+   mode: always
+ 
